@@ -11,6 +11,11 @@ const login = async (req, res) => {
   if (!user) {
     throw HttpError(401, "Email or password invalid");
   }
+
+  if (!user.verify) {
+    throw HttpError(401, "Unauthorized");
+  }
+
   const passwordCompare = await hashPasswords.comparePassword(
     password,
     user.password

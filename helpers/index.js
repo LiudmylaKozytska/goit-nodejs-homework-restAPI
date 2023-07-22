@@ -3,6 +3,7 @@ const ctrlWrapper = require("./ctrlWrapper");
 const handleMongooseError = require("./handleMongooseError");
 const hashPasswords = require("./hashPassword");
 const jimpAvatar = require("./jimpImage");
+const sendEmail = require("./sendEmail");
 
 module.exports = {
   HttpError,
@@ -10,4 +11,5 @@ module.exports = {
   handleMongooseError,
   hashPasswords,
   jimpAvatar,
+  sendEmail,
 };
